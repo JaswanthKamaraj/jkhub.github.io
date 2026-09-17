@@ -1,252 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>JASWANTH KAMARAJ J | JK</title>
+    <title>Jaswanth Kamaraj J | JK</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            min-height: 100vh;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-            background:
-                radial-gradient(circle at 50% 15%, #07345a 0%, #031426 30%, #020812 65%, #010308 100%);
-            text-align: center;
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: auto;
-            padding: 55px 25px 40px;
-        }
-
-        /* Top Text */
-        .tagline {
-            color: #00bfff;
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 8px;
-            line-height: 2;
-            margin-bottom: 28px;
-            text-transform: uppercase;
-            text-shadow: 0 0 15px #00bfff;
-        }
-
-        /* Profile Image */
-        .profile-box {
-            width: 300px;
-            height: 300px;
-            margin: auto;
-            padding: 5px;
-            border: 3px solid #00bfff;
-            border-radius: 35px;
-            box-shadow:
-                0 0 15px #00bfff,
-                0 0 45px rgba(0, 191, 255, 0.35);
-            overflow: hidden;
-        }
-
-        .profile {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 28px;
-            display: block;
-        }
-
-        /* Name */
-        h1 {
-            margin-top: 45px;
-            font-size: 43px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        /* Username */
-        .username {
-            margin-top: 18px;
-            color: #c5d2df;
-            font-size: 18px;
-            letter-spacing: 2px;
-        }
-
-        /* Bio */
-        .bio {
-            margin-top: 20px;
-            color: #d8e2ec;
-            font-size: 19px;
-            line-height: 1.6;
-        }
-
-        /* About */
-        .about {
-            margin-top: 35px;
-            color: #9fb1c2;
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        /* Buttons */
-        .buttons {
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .button {
-            width: 85%;
-            max-width: 350px;
-            padding: 18px 25px;
-            border: 2px solid #00bfff;
-            border-radius: 18px;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            background: rgba(0, 10, 25, 0.55);
-            box-shadow: 0 0 12px rgba(0, 191, 255, 0.25);
-            transition: all 0.3s ease;
-        }
-
-        .button:hover {
-            background: #00bfff;
-            color: #00101c;
-            box-shadow:
-                0 0 15px #00bfff,
-                0 0 35px rgba(0, 191, 255, 0.5);
-            transform: translateY(-4px);
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 55px;
-            color: #667788;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-
-        /* Mobile */
-        @media (max-width: 500px) {
-
-            .container {
-                padding-top: 40px;
-            }
-
-            .tagline {
-                font-size: 12px;
-                letter-spacing: 5px;
-            }
-
-            .profile-box {
-                width: 260px;
-                height: 260px;
-            }
-
-            h1 {
-                font-size: 30px;
-                line-height: 1.3;
-            }
-
-            .username {
-                font-size: 16px;
-            }
-
-            .bio {
-                font-size: 17px;
-            }
-
-            .button {
-                width: 90%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+    <!-- ================= HERO ================= -->
 
-        <!-- TOP TAGLINE -->
-        <div class="tagline">
-            EDITOR • PHOTOGRAPHY • CREATIVE
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <!-- PROFILE PHOTO -->
+            <div class="profile-box">
+                <img
+                    src="profile.jpg"
+                    alt="Jaswanth Kamaraj J"
+                    class="profile">
+            </div>
+
+            <!-- TAGLINE -->
+            <p class="tagline">
+                STUDENT • PHOTOGRAPHER • EDITOR
+            </p>
+
+            <!-- NAME -->
+            <h1>
+                JASWANTH<br>
+                KAMARAJ J
+            </h1>
+
+            <!-- COURSE -->
+            <h2>
+                B.Tech Student • AI &amp; DS
+            </h2>
+
+            <!-- BIO -->
+            <p class="bio">
+                📸 Photographer &nbsp; • &nbsp; 🎬 Editor
+            </p>
+
+            <!-- INSTAGRAM USERNAME -->
+            <p class="username">
+                @jaswanth._.07_
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+
+                <a
+                    href="https://www.instagram.com/jaswanth._.07_/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    📸 Instagram
+                </a>
+
+                <a
+                    href="https://github.com/jkhub"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    💻 GitHub
+                </a>
+
+                <a
+                    href="mailto:rockjaswanth.157@gmail.com">
+                    ✉️ Contact Me
+                </a>
+
+            </div>
+
         </div>
 
-        <!-- PROFILE PHOTO -->
-        <div class="profile-box">
-            <img
-                class="profile"
-                src="profile.jpg"
-                alt="Jaswanth Kamaraj J">
-        </div>
+    </section>
 
-        <!-- NAME -->
-        <h1>
-            JASWANTH<br>
-            KAMARAJ J
-        </h1>
 
-        <!-- USERNAME -->
-        <div class="username">
-            @jaswanth._.07_
-        </div>
+    <!-- ================= ABOUT ================= -->
 
-        <!-- BIO -->
-        <p class="bio">
-            EDITOR AND PHOTOGRAPHY 📸
+    <section class="section" id="about">
+
+        <p class="small-title">
+            GET TO KNOW ME
         </p>
 
-        <!-- ABOUT -->
-        <p class="about">
-            Capturing moments • Creating stories •
-            Exploring creativity through photography and editing.
-        </p>
+        <h2 class="section-title">
+            ABOUT ME
+        </h2>
 
-        <!-- BUTTONS -->
-        <div class="buttons">
+        <div class="about-box">
 
-            <a
-                class="button"
-                href="https://www.instagram.com/jaswanth._.07_/"
-                target="_blank"
-                rel="noopener noreferrer">
-                📸 Instagram
-            </a>
+            <p>
+                I am <strong>Jaswanth Kamaraj J</strong>, a B.Tech student
+                specializing in <strong>Artificial Intelligence and Data Science
+                (AI &amp; DS)</strong>, with a strong interest in technology
+                and creative media.
+            </p>
 
-            <a
-                class="button"
-                href="https://github.com/jkhub"
-                target="_blank"
-                rel="noopener noreferrer">
-                💻 GitHub
-            </a>
+            <p>
+                Alongside my academic journey, I am passionate about
+                <strong>photography, photo editing, and video editing</strong>.
+                I enjoy transforming ideas into engaging visual content
+                and continuously exploring new creative techniques.
+            </p>
 
-            <a
-                class="button"
-                href="mailto:rockjaswanth.157@gmail.com">
-                ✉️ Contact Me
-            </a>
+            <p>
+                I am also interested in <strong>Artificial Intelligence,
+                programming, and web development</strong>. I am committed
+                to developing my technical and creative skills through
+                continuous learning and hands-on projects.
+            </p>
+
+            <p class="highlight">
+                Technology meets creativity — that's what I enjoy building.
+            </p>
 
         </div>
 
-        <!-- FOOTER -->
-        <footer>
-            © 2026 JK • JASWANTH KAMARAJ J
-        </footer>
+    </section>
 
-    </div>
+
+    <!-- ================= INTERESTS ================= -->
+
+    <section class="section" id="interests">
+
+        <p class="small-title">
+            WHAT I LOVE
+        </p>
+
+        <h2 class="section-title">
+            INTERESTS
+        </h2>
+
+
+        <div class="cards">
+
+            <!-- AI -->
+            <div class="card">
+
+                <div class="icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Artificial Intelligence &amp; Data Science
+                </h3>
+
+                <p>
+                    Exploring AI, machine learning, data analysis,
+                    programming and emerging technologies while
+                    developing practical technical skills.
+                </p>
+
+            </div>
+
+
+            <!-- PHOTOGRAPHY -->
+            <div class="card">
+
+                <div class="icon">
+                    📸
+                </div>
+
+                <h3>
+                    Photography
+                </h3>
+
+                <p>
+                    Capturing unique moments, creative compositions
+                    and meaningful stories through photography.
+                </p>
+
+            </div>
+
+
+            <!-- EDITING -->
+            <div class="card">
+
+                <div class="icon">
+                    🎬
+                </div>
+
+                <h3>
+                    Photo &amp; Video Editing
+                </h3>
+
+                <p>
+                    Creating engaging visual content through photo
+                    manipulation, color grading and video editing.
+                </p>
+
+            </div>
+
+
+            <!-- WEB DEVELOPMENT -->
+            <div class="card">
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Learning to design and develop modern,
+                    responsive websites while improving my
+                    programming skills.
+                </p>
+
+            </div>
+
+
+            <!-- CREATIVITY -->
+            <div class="card">
+
+                <div class="icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Creativity
+                </h3>
+
+                <p>
+                    Experimenting with new ideas, visual styles
+                    and creative projects that combine technology
+                    with artistic expression.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section class="section" id="skills">
+
+        <p class="small-title">
+            MY EXPERTISE
+        </p>
+
+        <h2 class="section-title">
+            WHAT I DO
+        </h2>
+
+        <div class="skills">
+
+            <span>🤖 AI &amp; DS</span>
+
+            <span>📸 Photography</span>
+
+            <span>🎬 Video Editing</span>
+
+            <span>🖼️ Photo Editing</span>
+
+            <span>💻 Web Development</span>
+
+            <span>🎨 Creative Design</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONNECT ================= -->
+
+    <section class="section connect">
+
+        <p class="small-title">
+            LET'S CONNECT
+        </p>
+
+        <h2 class="section-title">
+            FIND ME ONLINE
+        </h2>
+
+
+        <a
+            class="contact-button"
+            href="https://www.instagram.com/jaswanth._.07_/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            📸 Instagram
+
+        </a>
+
+
+        <a
+            class="contact-button"
+            href="https://github.com/jkhub"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            💻 GitHub
+
+        </a>
+
+
+        <a
+            class="contact-button"
+            href="mailto:rockjaswanth.157@gmail.com">
+
+            ✉️ rockjaswanth.157@gmail.com
+
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            JK
+        </div>
+
+        <p>
+            JASWANTH KAMARAJ J
+        </p>
+
+        <span>
+            Student • Photographer • Editor
+        </span>
+
+        <div class="copyright">
+            © 2026 JK. All Rights Reserved.
+        </div>
+
+    </footer>
+
 
 </body>
 </html>
