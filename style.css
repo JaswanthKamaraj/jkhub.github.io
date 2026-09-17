@@ -10,178 +10,234 @@ html {
 
 body {
     background: #000000;
-    color: #ffffff;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
 }
 
-/* Main Page */
+/* =========================
+   MAIN PAGE
+========================= */
 
-.profile-page {
+.page {
     width: 100%;
     max-width: 700px;
+    min-height: 100vh;
+
     margin: auto;
-    padding: 35px 25px 50px;
+
+    padding: 28px 22px 60px;
+
     text-align: center;
 
     background:
         radial-gradient(
-            circle at 50% 15%,
-            rgba(147, 51, 234, 0.25),
-            transparent 35%
+            circle at 50% 18%,
+            rgba(125, 35, 190, 0.35),
+            transparent 30%
         ),
         radial-gradient(
-            circle at 50% 70%,
-            rgba(88, 28, 135, 0.12),
-            transparent 45%
+            circle at 10% 45%,
+            rgba(90, 20, 150, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 65%,
+            rgba(100, 20, 170, 0.14),
+            transparent 30%
         ),
         #000000;
 }
 
-/* Profile Picture */
 
-.profile-image-container {
-    width: 270px;
-    height: 270px;
-    margin: 0 auto 55px;
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.profile-wrap {
+    width: 190px;
+    height: 190px;
+
+    margin: 0 auto 62px;
 
     border: 4px solid #a855f7;
-    border-radius: 45px;
+
+    border-radius: 38px;
 
     overflow: hidden;
 
+    background: #000;
+
     box-shadow:
-        0 0 10px #9333ea,
-        0 0 30px rgba(147, 51, 234, 0.8),
-        0 0 65px rgba(126, 34, 206, 0.45);
+        0 0 8px #a855f7,
+        0 0 25px #9333ea,
+        0 0 55px rgba(147, 51, 234, 0.55);
 }
 
-.profile-image {
+.profile-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+
     display: block;
+
+    object-fit: cover;
 }
 
-/* Tagline */
+
+/* =========================
+   TAGLINE
+========================= */
 
 .tagline {
-    color: #a855f7;
+    color: #b84cff;
 
-    font-size: 19px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 700;
 
-    letter-spacing: 9px;
-    line-height: 2.2;
+    letter-spacing: 7px;
+
+    line-height: 2.6;
 
     margin-bottom: 55px;
+
+    text-shadow:
+        0 0 12px rgba(168, 85, 247, 0.8);
 }
 
 .tagline span {
     color: #c084fc;
-    margin: 0 8px;
+
+    margin: 0 4px;
 }
 
-/* Name */
+
+/* =========================
+   NAME
+========================= */
 
 h1 {
     color: #ffffff;
 
-    font-size: clamp(45px, 10vw, 80px);
+    font-size: 60px;
+
     font-weight: 900;
 
     line-height: 1.05;
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
-    margin-bottom: 35px;
+    margin-bottom: 34px;
 
     text-shadow:
-        0 0 15px rgba(168, 85, 247, 0.25);
+        0 0 20px rgba(168, 85, 247, 0.25);
 }
 
-/* Course */
 
-h2 {
-    color: #d8c4f0;
+/* =========================
+   COURSE
+========================= */
 
-    font-size: clamp(22px, 5vw, 34px);
+.course {
+    color: #d8c8e5;
+
+    font-size: 26px;
+
     font-weight: 400;
 
-    line-height: 1.5;
+    line-height: 1.6;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-/* Description */
 
-.description {
-    color: #c084fc;
+/* =========================
+   ROLE
+========================= */
 
-    font-size: 22px;
-    font-weight: 500;
+.role {
+    color: #d4b5ef;
+
+    font-size: 19px;
 
     margin-bottom: 12px;
 }
 
+
+/* =========================
+   USERNAME
+========================= */
+
 .username {
     color: #a855f7;
 
-    font-size: 18px;
+    font-size: 17px;
 
-    margin-bottom: 70px;
+    margin-bottom: 85px;
+
+    text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.6);
 }
 
-/* Sections */
+
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
-    margin-bottom: 70px;
+    margin-bottom: 75px;
 }
 
-.section h3 {
+.section h2 {
     display: inline-block;
 
     color: #ffffff;
 
-    font-size: 24px;
+    font-size: 25px;
+
     letter-spacing: 5px;
 
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 
     padding-bottom: 10px;
 
     border-bottom: 2px solid #9333ea;
+
+    text-shadow:
+        0 0 12px rgba(168, 85, 247, 0.5);
 }
 
 .section > p {
-    color: #d1c5dc;
+    max-width: 600px;
+
+    margin: 0 auto 20px;
+
+    color: #d0c5d8;
 
     font-size: 17px;
+
     line-height: 1.8;
-
-    margin: 0 auto 18px;
-
-    max-width: 600px;
 }
 
-/* Information Boxes */
 
-.info-box {
-    background: rgba(15, 15, 15, 0.9);
+/* =========================
+   INTEREST BOXES
+========================= */
+
+.interest {
+    padding: 24px 20px;
+
+    margin-bottom: 18px;
+
+    background: rgba(8, 8, 8, 0.85);
 
     border: 1px solid rgba(168, 85, 247, 0.55);
 
     border-radius: 20px;
 
-    padding: 25px;
-
-    margin: 18px 0;
-
     box-shadow:
         0 0 15px rgba(147, 51, 234, 0.12);
 }
 
-.info-box h4 {
+.interest h3 {
     color: #c084fc;
 
     font-size: 20px;
@@ -189,60 +245,79 @@ h2 {
     margin-bottom: 12px;
 }
 
-.info-box p {
-    color: #cfc3d8;
+.interest p {
+    color: #cfc4d6;
 
     font-size: 16px;
+
     line-height: 1.7;
 }
 
-/* Skills */
+
+/* =========================
+   SKILLS
+========================= */
 
 .skills {
     display: flex;
-    flex-wrap: wrap;
+
     justify-content: center;
+
+    flex-wrap: wrap;
+
     gap: 12px;
 }
 
 .skills span {
     color: #e9d5ff;
 
-    background: #080808;
+    background: #050505;
 
     border: 1.5px solid #9333ea;
 
     border-radius: 30px;
 
-    padding: 13px 20px;
+    padding: 13px 19px;
 
     font-size: 15px;
 
     box-shadow:
-        0 0 10px rgba(147, 51, 234, 0.15);
+        0 0 12px rgba(147, 51, 234, 0.18);
 }
 
-/* Social Buttons */
 
-.social-links {
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
 
-    gap: 22px;
+    gap: 34px;
 
     margin-top: 20px;
 }
 
-.social-button {
-    width: min(100%, 330px);
+.button {
+    width: 280px;
 
-    padding: 20px;
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
 
     color: #ffffff;
 
-    background: #050505;
+    background: #030303;
 
     border: 3px solid #9333ea;
 
@@ -250,144 +325,226 @@ h2 {
 
     text-decoration: none;
 
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 21px;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
-}
-
-.social-button:hover {
-    background: #100018;
-
-    transform: translateY(-3px);
+    font-weight: 700;
 
     box-shadow:
-        0 0 12px #9333ea,
-        0 0 30px rgba(147, 51, 234, 0.5);
+        0 0 8px rgba(147, 51, 234, 0.8),
+        0 0 25px rgba(147, 51, 234, 0.25);
+
+    transition: 0.25s ease;
 }
 
-.social-button:active {
-    transform: scale(0.98);
+.button:hover {
+    background: #0c0012;
+
+    border-color: #b84cff;
+
+    box-shadow:
+        0 0 12px #a855f7,
+        0 0 35px rgba(168, 85, 247, 0.55);
+
+    transform: translateY(-3px);
 }
 
-/* Footer */
+.button:active {
+    transform: scale(0.97);
+}
+
+
+/* Instagram icon */
+
+.instagram-icon {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #a855f7;
+
+    border-radius: 10px;
+
+    color: #a855f7;
+
+    font-size: 27px;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    color: #8e7b9d;
+    color: #76677e;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
-/* Mobile */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
-    .profile-page {
-        padding: 10px 20px 45px;
+    .page {
+        padding: 10px 18px 50px;
 
         background:
             radial-gradient(
                 circle at 50% 12%,
-                rgba(147, 51, 234, 0.28),
+                rgba(125, 35, 190, 0.34),
                 transparent 32%
             ),
             #000000;
     }
 
-    .profile-image-container {
-        width: 270px;
-        height: 270px;
 
-        border-radius: 45px;
+    /* EXACT SMALL MOBILE
+       PROFILE SIZE */
 
-        margin-bottom: 55px;
+    .profile-wrap {
+        width: 190px;
+        height: 190px;
+
+        margin-bottom: 58px;
+
+        border-width: 4px;
+
+        border-radius: 38px;
     }
+
 
     .tagline {
-        font-size: 17px;
-        letter-spacing: 7px;
+        font-size: 14px;
 
-        line-height: 2.4;
+        letter-spacing: 6px;
 
-        margin-bottom: 55px;
+        line-height: 2.8;
+
+        margin-bottom: 52px;
     }
 
-    .tagline span {
-        margin: 0 4px;
-    }
 
     h1 {
-        font-size: 52px;
+        font-size: 51px;
 
-        letter-spacing: 1px;
+        line-height: 1.05;
 
-        margin-bottom: 30px;
+        margin-bottom: 32px;
     }
 
-    h2 {
+
+    .course {
         font-size: 24px;
+
+        line-height: 1.55;
     }
 
-    .description {
-        font-size: 19px;
+
+    .role {
+        font-size: 18px;
     }
+
 
     .username {
         font-size: 16px;
 
-        margin-bottom: 60px;
+        margin-bottom: 75px;
     }
+
 
     .section {
-        margin-bottom: 55px;
+        margin-bottom: 65px;
     }
 
-    .section h3 {
+
+    .section h2 {
         font-size: 21px;
+
         letter-spacing: 4px;
     }
 
+
     .section > p {
         font-size: 16px;
+
+        line-height: 1.75;
     }
 
-    .info-box {
-        padding: 20px;
+
+    .interest {
+        padding: 21px 17px;
     }
 
-    .social-button {
-        width: 85%;
 
-        padding: 18px;
-
+    .interest h3 {
         font-size: 19px;
+    }
+
+
+    .interest p {
+        font-size: 15px;
+    }
+
+
+    .button {
+        width: 280px;
+
+        height: 72px;
+
+        border-radius: 22px;
+
+        font-size: 20px;
+    }
+
+
+    .buttons {
+        gap: 30px;
     }
 }
 
-/* Small Phones */
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
 
 @media (max-width: 380px) {
 
-    .profile-image-container {
-        width: 230px;
-        height: 230px;
+    .profile-wrap {
+        width: 175px;
+        height: 175px;
+
+        border-radius: 35px;
     }
 
+
     .tagline {
-        font-size: 14px;
+        font-size: 12px;
+
         letter-spacing: 5px;
     }
 
+
     h1 {
-        font-size: 43px;
+        font-size: 44px;
     }
 
-    h2 {
+
+    .course {
         font-size: 21px;
+    }
+
+
+    .button {
+        width: 270px;
     }
 }
