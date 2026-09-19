@@ -1,31 +1,650 @@
-/* PHOTOGRAPHY GALLERY */
+/* =========================================
+   JK PORTFOLIO
+   REFERENCE STYLE
+   BLACK + PURPLE
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN PAGE
+   ========================================= */
+
+.profile-page {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    padding: 8px 28px 70px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   PROFILE PHOTO
+   ========================================= */
+
+.profile-photo {
+    width: 390px;
+    height: 390px;
+
+    max-width: 100%;
+    max-height: 390px;
+
+    margin: 0 auto;
+
+    border: 5px solid #a855f7;
+
+    border-radius: 55px;
+
+    overflow: hidden;
+
+    background: #000000;
+
+    box-shadow:
+        0 0 10px #a855f7,
+        0 0 25px #9333ea,
+        0 0 50px rgba(168, 85, 247, 0.55);
+
+    position: relative;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   TAGLINE
+   ========================================= */
+
+.tagline {
+    margin-top: 62px;
+
+    color: #c084fc;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 9px;
+
+    line-height: 1.9;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   NAME
+   ========================================= */
+
+.profile-page h1 {
+    margin-top: 58px;
+
+    color: #ffffff;
+
+    font-size: 64px;
+
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   COURSE
+   ========================================= */
+
+.course {
+    margin-top: 55px;
+
+    color: #d1d5db;
+
+    font-size: 29px;
+
+    line-height: 1.5;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   ROLE
+   ========================================= */
+
+.role {
+    margin-top: 22px;
+
+    color: #c084fc;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   USERNAME
+   ========================================= */
+
+.username {
+    margin-top: 16px;
+
+    color: #9ca3af;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   SOCIAL BUTTONS
+   ========================================= */
+
+.social-buttons {
+    margin-top: 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.social-buttons a {
+    width: 280px;
+
+    padding: 20px 20px;
+
+    border: 3px solid #a855f7;
+
+    border-radius: 25px;
+
+    color: #ffffff;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 0 8px rgba(168, 85, 247, 0.25);
+}
+
+.social-buttons a:hover {
+    background: #9333ea;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.7);
+}
+
+
+/* =========================================
+   CONTENT SECTIONS
+   ========================================= */
+
+.content-section {
+    margin-top: 110px;
+
+    padding-top: 10px;
+}
+
+.content-section h2 {
+    color: #c084fc;
+
+    font-size: 25px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 35px;
+
+    font-weight: 800;
+}
+
+.content-section p {
+    color: #d1d5db;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================
+   INTERESTS
+   ========================================= */
+
+.interest-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.interest-list p {
+    margin: 0;
+
+    padding: 17px 15px;
+
+    border-bottom: 1px solid #2a1640;
+
+    color: #e5e7eb;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   SKILLS
+   ========================================= */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 14px;
+}
+
+.skills span {
+    display: inline-block;
+
+    padding: 12px 19px;
+
+    border: 2px solid #9333ea;
+
+    border-radius: 30px;
+
+    color: #d8b4fe;
+
+    font-size: 15px;
+
+    background: transparent;
+
+    box-shadow:
+        0 0 8px rgba(147, 51, 234, 0.15);
+}
+
+
+/* =========================================
+   PHOTOGRAPHY GALLERY
+   ========================================= */
+
+.photography {
+    margin-top: 115px;
+}
 
 .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 25px;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    width: 100%;
 }
 
 .photo-gallery img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border: 2px solid #9333ea;
-    border-radius: 18px;
+
+    height: 210px;
+
     display: block;
-    box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
+
+    object-fit: cover;
+
+    border: 3px solid #9333ea;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 0 12px rgba(168, 85, 247, 0.3);
+
+    transition: 0.3s ease;
 }
+
+.photo-gallery img:hover {
+    border-color: #c084fc;
+
+    box-shadow:
+        0 0 25px rgba(168, 85, 247, 0.65);
+
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+.contact {
+    margin-top: 110px;
+}
+
+.outline-button {
+    display: block;
+
+    width: 280px;
+
+    margin: 25px auto;
+
+    padding: 18px 20px;
+
+    border: 3px solid #a855f7;
+
+    border-radius: 25px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.outline-button:hover {
+    background: #9333ea;
+
+    box-shadow:
+        0 0 22px rgba(168, 85, 247, 0.7);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    margin-top: 80px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #21142f;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
 
 @media (max-width: 600px) {
 
+    .profile-page {
+        max-width: 100%;
+
+        padding:
+            5px
+            22px
+            60px;
+    }
+
+
+    /* PROFILE PHOTO */
+
+    .profile-photo {
+        width: 390px;
+        height: 390px;
+
+        max-width: calc(100vw - 44px);
+        max-height: calc(100vw - 44px);
+
+        border-width: 4px;
+
+        border-radius: 48px;
+    }
+
+
+    /* TAGLINE */
+
+    .tagline {
+        margin-top: 58px;
+
+        font-size: 16px;
+
+        letter-spacing: 6px;
+
+        line-height: 2.2;
+    }
+
+
+    /* NAME */
+
+    .profile-page h1 {
+        margin-top: 55px;
+
+        font-size: 45px;
+
+        line-height: 1.08;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* COURSE */
+
+    .course {
+        margin-top: 48px;
+
+        font-size: 25px;
+
+        line-height: 1.6;
+    }
+
+
+    /* ROLE */
+
+    .role {
+        margin-top: 18px;
+
+        font-size: 16px;
+    }
+
+
+    /* USERNAME */
+
+    .username {
+        font-size: 14px;
+    }
+
+
+    /* BUTTONS */
+
+    .social-buttons {
+        margin-top: 65px;
+
+        gap: 28px;
+    }
+
+    .social-buttons a {
+        width: 280px;
+
+        max-width: 100%;
+
+        padding: 18px;
+
+        font-size: 19px;
+
+        border-width: 3px;
+
+        border-radius: 24px;
+    }
+
+
+    /* SECTIONS */
+
+    .content-section {
+        margin-top: 95px;
+    }
+
+    .content-section h2 {
+        font-size: 21px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 28px;
+    }
+
+    .content-section p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    /* INTERESTS */
+
+    .interest-list p {
+        font-size: 15px;
+
+        padding: 15px 8px;
+    }
+
+
+    /* SKILLS */
+
+    .skills {
+        gap: 10px;
+    }
+
+    .skills span {
+        font-size: 13px;
+
+        padding: 10px 14px;
+    }
+
+
+    /* PHOTOGRAPHY */
+
+    .photography {
+        margin-top: 100px;
+    }
+
     .photo-gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+
         gap: 10px;
     }
 
     .photo-gallery img {
         height: 150px;
+
+        border-width: 2px;
+
+        border-radius: 16px;
     }
 
+
+    /* CONTACT */
+
+    .contact {
+        margin-top: 90px;
+    }
+
+    .outline-button {
+        width: 280px;
+
+        max-width: 100%;
+
+        padding: 17px;
+
+        font-size: 18px;
+    }
+
+
+    footer {
+        margin-top: 65px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .profile-page {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .profile-photo {
+        max-width: calc(100vw - 34px);
+        max-height: calc(100vw - 34px);
+    }
+
+    .tagline {
+        font-size: 13px;
+        letter-spacing: 4px;
+    }
+
+    .profile-page h1 {
+        font-size: 37px;
+    }
+
+    .course {
+        font-size: 21px;
+    }
+
+    .social-buttons a,
+    .outline-button {
+        width: 250px;
+    }
 }
