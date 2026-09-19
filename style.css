@@ -1,8 +1,10 @@
 /* =========================================
    JK PORTFOLIO
-   REFERENCE STYLE
-   BLACK + PURPLE
+   BLACK + PURPLE REFERENCE UI
    ========================================= */
+
+
+/* ---------- RESET ---------- */
 
 * {
     box-sizing: border-box;
@@ -10,36 +12,69 @@
     padding: 0;
 }
 
+
+/* ---------- PAGE ---------- */
+
 html {
-    scroll-behavior: smooth;
+    background: #000000;
 }
 
 body {
-    background: #000000;
+    width: 100%;
+    min-height: 100vh;
+    background: #000000 !important;
     color: #ffffff;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 
 
-/* =========================================
-   MAIN PAGE
-   ========================================= */
+/* ---------- MAIN PROFILE ---------- */
 
 .profile-page {
+    position: relative;
     width: 100%;
     max-width: 600px;
-
+    min-height: 100vh;
     margin: 0 auto;
-
-    padding: 8px 28px 70px;
-
+    padding: 12px 28px 70px;
     text-align: center;
+    background: #000000;
+    overflow: hidden;
+}
+
+
+/* ---------- PURPLE GLOW ---------- */
+
+.profile-page::before {
+    content: "";
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    top: 80px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #9333ea;
+
+    filter: blur(140px);
+
+    opacity: 0.20;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* Keep content above glow */
+
+.profile-page > * {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -56,21 +91,20 @@ body {
 
     margin: 0 auto;
 
-    border: 5px solid #a855f7;
-
-    border-radius: 55px;
-
     overflow: hidden;
 
     background: #000000;
 
+    border: 5px solid #a855f7;
+
+    border-radius: 55px;
+
     box-shadow:
         0 0 10px #a855f7,
         0 0 25px #9333ea,
-        0 0 50px rgba(168, 85, 247, 0.55);
-
-    position: relative;
+        0 0 50px rgba(168, 85, 247, 0.45);
 }
+
 
 .profile-photo img {
     width: 100%;
@@ -87,16 +121,14 @@ body {
    ========================================= */
 
 .tagline {
-    margin-top: 62px;
+    margin-top: 58px;
 
     color: #c084fc;
 
     font-size: 20px;
-
     font-weight: 700;
 
-    letter-spacing: 9px;
-
+    letter-spacing: 8px;
     line-height: 1.9;
 
     text-transform: uppercase;
@@ -108,19 +140,20 @@ body {
    ========================================= */
 
 .profile-page h1 {
-    margin-top: 58px;
+    margin-top: 55px;
 
     color: #ffffff;
 
-    font-size: 64px;
-
+    font-size: 58px;
     font-weight: 900;
 
-    line-height: 1.05;
-
+    line-height: 1.08;
     letter-spacing: 2px;
 
     text-transform: uppercase;
+
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.08);
 }
 
 
@@ -129,15 +162,14 @@ body {
    ========================================= */
 
 .course {
-    margin-top: 55px;
+    margin-top: 48px;
 
     color: #d1d5db;
 
-    font-size: 29px;
+    font-size: 27px;
+    font-weight: 400;
 
     line-height: 1.5;
-
-    font-weight: 400;
 }
 
 
@@ -146,11 +178,12 @@ body {
    ========================================= */
 
 .role {
-    margin-top: 22px;
+    margin-top: 20px;
 
     color: #c084fc;
 
     font-size: 18px;
+    font-weight: 600;
 
     letter-spacing: 1px;
 }
@@ -161,7 +194,7 @@ body {
    ========================================= */
 
 .username {
-    margin-top: 16px;
+    margin-top: 15px;
 
     color: #9ca3af;
 
@@ -176,49 +209,57 @@ body {
    ========================================= */
 
 .social-buttons {
-    margin-top: 70px;
-
     display: flex;
 
     flex-direction: column;
 
     align-items: center;
 
-    gap: 30px;
+    gap: 25px;
+
+    margin-top: 65px;
 }
 
-.social-buttons a {
-    width: 280px;
 
-    padding: 20px 20px;
+.social-buttons a {
+    display: block;
+
+    width: 280px;
+    max-width: 100%;
+
+    padding: 18px;
 
     border: 3px solid #a855f7;
 
     border-radius: 25px;
 
-    color: #ffffff;
-
     background: transparent;
+
+    color: #ffffff;
 
     text-decoration: none;
 
-    font-size: 20px;
-
+    font-size: 19px;
     font-weight: 700;
-
-    transition: 0.3s ease;
 
     box-shadow:
         0 0 8px rgba(168, 85, 247, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
 }
+
 
 .social-buttons a:hover {
     background: #9333ea;
 
-    color: #ffffff;
-
     box-shadow:
-        0 0 20px rgba(168, 85, 247, 0.7);
+        0 0 15px #a855f7,
+        0 0 30px rgba(168, 85, 247, 0.5);
+
+    transform: translateY(-3px);
 }
 
 
@@ -227,56 +268,76 @@ body {
    ========================================= */
 
 .content-section {
-    margin-top: 110px;
+    margin-top: 105px;
 
     padding-top: 10px;
 }
 
+
 .content-section h2 {
+    margin-bottom: 32px;
+
     color: #c084fc;
 
     font-size: 25px;
+    font-weight: 800;
 
     letter-spacing: 5px;
 
-    margin-bottom: 35px;
-
-    font-weight: 800;
+    text-transform: uppercase;
 }
 
+
 .content-section p {
+    margin-bottom: 22px;
+
     color: #d1d5db;
 
     font-size: 17px;
 
     line-height: 1.9;
-
-    margin-bottom: 22px;
 }
 
 
 /* =========================================
-   INTERESTS
+   INTEREST CARDS
    ========================================= */
 
-.interest-list {
-    display: flex;
+.interest-card {
+    margin-bottom: 18px;
 
-    flex-direction: column;
+    padding: 22px 20px;
 
-    gap: 14px;
+    text-align: left;
+
+    background: #080808;
+
+    border: 2px solid #6b21a8;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 12px rgba(147, 51, 234, 0.15);
 }
 
-.interest-list p {
-    margin: 0;
 
-    padding: 17px 15px;
+.interest-card h3 {
+    margin-bottom: 10px;
 
-    border-bottom: 1px solid #2a1640;
+    color: #ffffff;
 
-    color: #e5e7eb;
+    font-size: 18px;
+}
 
-    font-size: 17px;
+
+.interest-card p {
+    margin-bottom: 0;
+
+    color: #bdbdbd;
+
+    font-size: 15px;
+
+    line-height: 1.7;
 }
 
 
@@ -291,36 +352,32 @@ body {
 
     justify-content: center;
 
-    gap: 14px;
+    gap: 12px;
 }
 
-.skills span {
-    display: inline-block;
 
-    padding: 12px 19px;
+.skills span {
+    padding: 12px 16px;
+
+    color: #ffffff;
+
+    background: #080808;
 
     border: 2px solid #9333ea;
 
     border-radius: 30px;
 
-    color: #d8b4fe;
-
-    font-size: 15px;
-
-    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
 
     box-shadow:
-        0 0 8px rgba(147, 51, 234, 0.15);
+        0 0 10px rgba(147, 51, 234, 0.15);
 }
 
 
 /* =========================================
-   PHOTOGRAPHY GALLERY
+   PHOTOGRAPHY
    ========================================= */
-
-.photography {
-    margin-top: 115px;
-}
 
 .photo-gallery {
     display: grid;
@@ -332,9 +389,9 @@ body {
     width: 100%;
 }
 
+
 .photo-gallery img {
     width: 100%;
-
     height: 210px;
 
     display: block;
@@ -345,59 +402,71 @@ body {
 
     border-radius: 22px;
 
-    box-shadow:
-        0 0 12px rgba(168, 85, 247, 0.3);
+    background: #080808;
 
-    transition: 0.3s ease;
+    box-shadow:
+        0 0 12px rgba(168, 85, 247, 0.30);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
+
 .photo-gallery img:hover {
-    border-color: #c084fc;
+    transform: scale(1.02);
 
     box-shadow:
-        0 0 25px rgba(168, 85, 247, 0.65);
-
-    transform: scale(1.02);
+        0 0 15px #a855f7,
+        0 0 30px rgba(168, 85, 247, 0.35);
 }
 
 
 /* =========================================
-   CONTACT
+   CONNECT
    ========================================= */
 
-.contact {
-    margin-top: 110px;
+.connect {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
 }
 
-.outline-button {
+
+.contact-button {
     display: block;
 
     width: 280px;
+    max-width: 100%;
 
-    margin: 25px auto;
+    margin-bottom: 20px;
 
-    padding: 18px 20px;
+    padding: 18px;
 
     border: 3px solid #a855f7;
 
-    border-radius: 25px;
+    border-radius: 24px;
 
     color: #ffffff;
 
+    background: transparent;
+
     text-decoration: none;
 
-    font-size: 19px;
-
+    font-size: 18px;
     font-weight: 700;
 
-    transition: 0.3s ease;
+    transition: 0.25s ease;
 }
 
-.outline-button:hover {
+
+.contact-button:hover {
     background: #9333ea;
 
     box-shadow:
-        0 0 22px rgba(168, 85, 247, 0.7);
+        0 0 15px #a855f7;
 }
 
 
@@ -410,9 +479,9 @@ footer {
 
     padding-top: 25px;
 
-    border-top: 1px solid #21142f;
+    border-top: 1px solid #2e1065;
 
-    color: #777777;
+    color: #6b7280;
 
     font-size: 13px;
 
@@ -426,13 +495,22 @@ footer {
 
 @media (max-width: 600px) {
 
+    body {
+        background: #000000 !important;
+    }
+
+
     .profile-page {
+        width: 100%;
+
         max-width: 100%;
 
         padding:
-            5px
+            8px
             22px
             60px;
+
+        background: #000000;
     }
 
 
@@ -454,22 +532,22 @@ footer {
     /* TAGLINE */
 
     .tagline {
-        margin-top: 58px;
+        margin-top: 55px;
 
-        font-size: 16px;
+        font-size: 15px;
 
-        letter-spacing: 6px;
+        letter-spacing: 5px;
 
-        line-height: 2.2;
+        line-height: 2.1;
     }
 
 
     /* NAME */
 
     .profile-page h1 {
-        margin-top: 55px;
+        margin-top: 52px;
 
-        font-size: 45px;
+        font-size: 43px;
 
         line-height: 1.08;
 
@@ -480,9 +558,9 @@ footer {
     /* COURSE */
 
     .course {
-        margin-top: 48px;
+        margin-top: 45px;
 
-        font-size: 25px;
+        font-size: 24px;
 
         line-height: 1.6;
     }
@@ -501,48 +579,53 @@ footer {
 
     .username {
         font-size: 14px;
+
+        letter-spacing: 1.5px;
     }
 
 
     /* BUTTONS */
 
     .social-buttons {
-        margin-top: 65px;
+        margin-top: 60px;
 
-        gap: 28px;
+        gap: 24px;
     }
+
 
     .social-buttons a {
         width: 280px;
 
         max-width: 100%;
 
-        padding: 18px;
+        padding: 17px;
 
-        font-size: 19px;
+        font-size: 18px;
 
         border-width: 3px;
 
-        border-radius: 24px;
+        border-radius: 23px;
     }
 
 
-    /* SECTIONS */
+    /* CONTENT */
 
     .content-section {
-        margin-top: 95px;
+        margin-top: 90px;
     }
 
+
     .content-section h2 {
-        font-size: 21px;
+        font-size: 22px;
 
         letter-spacing: 4px;
 
         margin-bottom: 28px;
     }
 
+
     .content-section p {
-        font-size: 15px;
+        font-size: 16px;
 
         line-height: 1.8;
     }
@@ -550,37 +633,45 @@ footer {
 
     /* INTERESTS */
 
-    .interest-list p {
-        font-size: 15px;
+    .interest-card {
+        padding: 20px 17px;
 
-        padding: 15px 8px;
+        border-radius: 18px;
+    }
+
+
+    .interest-card h3 {
+        font-size: 17px;
+    }
+
+
+    .interest-card p {
+        font-size: 14px;
     }
 
 
     /* SKILLS */
 
     .skills {
-        gap: 10px;
+        gap: 9px;
     }
+
 
     .skills span {
+        padding: 10px 13px;
+
         font-size: 13px;
-
-        padding: 10px 14px;
     }
 
 
-    /* PHOTOGRAPHY */
-
-    .photography {
-        margin-top: 100px;
-    }
+    /* PHOTOS */
 
     .photo-gallery {
         grid-template-columns: 1fr 1fr;
 
         gap: 10px;
     }
+
 
     .photo-gallery img {
         height: 150px;
@@ -593,58 +684,20 @@ footer {
 
     /* CONTACT */
 
-    .contact {
-        margin-top: 90px;
-    }
-
-    .outline-button {
+    .contact-button {
         width: 280px;
 
         max-width: 100%;
 
         padding: 17px;
 
-        font-size: 18px;
+        font-size: 17px;
     }
 
 
     footer {
         margin-top: 65px;
-    }
-}
 
-
-/* =========================================
-   VERY SMALL PHONES
-   ========================================= */
-
-@media (max-width: 380px) {
-
-    .profile-page {
-        padding-left: 17px;
-        padding-right: 17px;
-    }
-
-    .profile-photo {
-        max-width: calc(100vw - 34px);
-        max-height: calc(100vw - 34px);
-    }
-
-    .tagline {
-        font-size: 13px;
-        letter-spacing: 4px;
-    }
-
-    .profile-page h1 {
-        font-size: 37px;
-    }
-
-    .course {
-        font-size: 21px;
-    }
-
-    .social-buttons a,
-    .outline-button {
-        width: 250px;
+        font-size: 12px;
     }
 }
