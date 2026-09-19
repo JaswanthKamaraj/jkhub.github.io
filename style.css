@@ -10,31 +10,23 @@
 
 
 /* =========================================
-   GLOBAL FONT
-   CLEAN FONT - NO CURSIVE / NO DECORATIVE
+   FORCE CLEAN FONT EVERYWHERE
 ========================================= */
 
 html,
 body,
 .page,
 .hero,
-.hero h1,
-.tagline,
-.course,
-.description,
-.username,
-.buttons,
-.buttons a,
+.hero *,
 .section,
-.section h2,
-.section p,
+.section *,
+.buttons,
+.buttons *,
 .interest-card,
-.interest-card h3,
-.interest-card p,
+.interest-card *,
+.gallery,
 .skills,
-.skills span,
 .connect,
-.connect a,
 footer {
     font-family: Arial, Helvetica, sans-serif !important;
 }
@@ -61,7 +53,7 @@ body {
 
 
 /* =========================================
-   MAIN PAGE
+   PAGE
 ========================================= */
 
 .page {
@@ -147,32 +139,36 @@ body {
 
     line-height: 2;
 
+    white-space: nowrap;
+
     text-transform: uppercase;
 }
 
 
 /* =========================================
-   NAME
+   FULL NAME
 ========================================= */
 
-.hero h1 {
+.full-name {
+    width: 100%;
+
     margin-top: 62px;
 
     color: #ffffff;
 
-    font-size: 64px;
+    font-family: Arial, Helvetica, sans-serif !important;
+
+    font-size: 56px;
 
     font-weight: 900;
 
     line-height: 1;
 
-    letter-spacing: 1px;
+    letter-spacing: 0;
+
+    white-space: nowrap;
 
     text-transform: uppercase;
-}
-
-.hero .surname {
-    margin-top: 5px;
 }
 
 
@@ -228,7 +224,7 @@ body {
 
 
 /* =========================================
-   SOCIAL BUTTONS
+   BUTTONS
 ========================================= */
 
 .buttons {
@@ -247,9 +243,11 @@ body {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     width: 280px;
+
     height: 70px;
 
     border: 3px solid #a855f7;
@@ -302,9 +300,6 @@ body {
     letter-spacing: 3px;
 
     text-transform: uppercase;
-
-    text-shadow:
-        0 0 15px rgba(168, 85, 247, 0.35);
 }
 
 
@@ -328,7 +323,7 @@ body {
 
 
 /* =========================================
-   INTERESTS
+   INTEREST CARDS
 ========================================= */
 
 .interests {
@@ -398,6 +393,7 @@ body {
 
 .gallery img {
     width: 100%;
+
     height: 240px;
 
     display: block;
@@ -466,9 +462,11 @@ body {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     width: 280px;
+
     height: 70px;
 
     border: 3px solid #a855f7;
@@ -484,18 +482,6 @@ body {
     font-size: 20px;
 
     font-weight: 700;
-
-    box-shadow:
-        0 0 10px rgba(168, 85, 247, 0.25);
-
-    transition: 0.25s ease;
-}
-
-.connect a:hover {
-    background: rgba(168, 85, 247, 0.12);
-
-    box-shadow:
-        0 0 20px rgba(168, 85, 247, 0.55);
 }
 
 
@@ -514,8 +500,6 @@ footer {
 
     font-size: 12px;
 
-    font-weight: 400;
-
     letter-spacing: 1px;
 }
 
@@ -533,7 +517,7 @@ footer {
 
         padding:
             5px
-            22px
+            17px
             60px;
     }
 
@@ -542,10 +526,12 @@ footer {
 
     .profile-photo {
         width: 390px;
+
         height: 390px;
 
-        max-width: calc(100vw - 44px);
-        max-height: calc(100vw - 44px);
+        max-width: calc(100vw - 34px);
+
+        max-height: calc(100vw - 34px);
 
         border-width: 4px;
 
@@ -558,28 +544,38 @@ footer {
     .tagline {
         margin-top: 55px;
 
-        font-size: 14px;
+        font-size: 13px;
 
-        letter-spacing: 4px;
+        letter-spacing: 3px;
 
         line-height: 2.3;
+
+        white-space: nowrap;
     }
 
 
-    /* NAME */
+    /* =====================================
+       NAME - ONE LINE
+    ===================================== */
 
-    .hero h1 {
+    .full-name {
+        width: 100%;
+
         margin-top: 58px;
 
-        font-size: 43px;
+        font-family: Arial, Helvetica, sans-serif !important;
 
-        line-height: 1.05;
+        font-size: 29px;
 
-        letter-spacing: 0.5px;
-    }
+        font-weight: 900;
 
-    .hero .surname {
-        margin-top: 4px;
+        line-height: 1.1;
+
+        letter-spacing: 0;
+
+        white-space: nowrap;
+
+        text-transform: uppercase;
     }
 
 
@@ -588,7 +584,7 @@ footer {
     .course {
         margin-top: 50px;
 
-        font-size: 24px;
+        font-size: 23px;
 
         line-height: 1.6;
     }
@@ -642,7 +638,7 @@ footer {
     .section h2 {
         margin-bottom: 70px;
 
-        font-size: 46px;
+        font-size: 44px;
 
         letter-spacing: 2px;
     }
@@ -653,7 +649,7 @@ footer {
     .about p {
         margin-bottom: 34px;
 
-        font-size: 20px;
+        font-size: 19px;
 
         line-height: 2;
     }
@@ -676,7 +672,7 @@ footer {
     .interest-card h3 {
         margin-bottom: 25px;
 
-        font-size: 24px;
+        font-size: 23px;
     }
 
     .interest-card p {
@@ -736,39 +732,22 @@ footer {
 
 
 /* =========================================
-   VERY SMALL PHONES
+   EXTRA SMALL PHONES
 ========================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 350px) {
 
-    .page {
-        padding-left: 17px;
-        padding-right: 17px;
-    }
-
-    .profile-photo {
-        max-width: calc(100vw - 34px);
-        max-height: calc(100vw - 34px);
+    .full-name {
+        font-size: 25px;
     }
 
     .tagline {
         font-size: 11px;
-        letter-spacing: 3px;
-    }
 
-    .hero h1 {
-        font-size: 37px;
+        letter-spacing: 2px;
     }
 
     .course {
-        font-size: 21px;
-    }
-
-    .about p {
-        font-size: 18px;
-    }
-
-    .section h2 {
-        font-size: 40px;
+        font-size: 20px;
     }
 }
