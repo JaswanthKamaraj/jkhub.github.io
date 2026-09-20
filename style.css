@@ -6,6 +6,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -19,9 +21,14 @@ html {
 
 body {
     min-height: 100vh;
+
     background: #000;
+
     color: #fff;
+
     overflow-x: hidden;
+
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -31,9 +38,13 @@ body {
 
 .page {
     width: 100%;
+
     max-width: 700px;
+
     margin: 0 auto;
+
     padding: 10px 35px 80px;
+
     text-align: center;
 
     background:
@@ -47,18 +58,30 @@ body {
 
 
 /* =========================================
+   HERO
+========================================= */
+
+.hero {
+    width: 100%;
+}
+
+
+/* =========================================
    PROFILE PHOTO
 ========================================= */
 
 .profile-photo {
     width: 320px;
     height: 320px;
+
     max-width: 100%;
+
     margin: 0 auto;
 
     overflow: hidden;
 
     border: 4px solid #a855f7;
+
     border-radius: 48px;
 
     box-shadow:
@@ -66,9 +89,11 @@ body {
         0 0 35px rgba(168, 85, 247, 0.55);
 }
 
+
 .profile-photo img {
     width: 100%;
     height: 100%;
+
     display: block;
 
     object-fit: cover;
@@ -85,11 +110,12 @@ body {
     color: #c084fc;
 
     font-size: 16px;
-    font-weight: 700;
+
+    font-weight: 600;
 
     letter-spacing: 4px;
 
-    white-space: nowrap !important;
+    white-space: nowrap;
 }
 
 
@@ -103,12 +129,14 @@ body {
     color: #fff;
 
     font-size: 40px;
-    font-weight: 400;
+
+    font-weight: 600;
 
     line-height: 1.2;
+
     letter-spacing: 0;
 
-    white-space: nowrap !important;
+    white-space: nowrap;
 }
 
 
@@ -122,9 +150,10 @@ body {
     color: #d1d5db;
 
     font-size: 21px;
+
     font-weight: 400;
 
-    white-space: nowrap !important;
+    white-space: nowrap;
 }
 
 
@@ -134,7 +163,9 @@ body {
 
 .buttons {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
     gap: 28px;
@@ -142,31 +173,44 @@ body {
     margin-top: 65px;
 }
 
+
 .buttons a {
     width: 280px;
+
     height: 68px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border: 2px solid #a855f7;
+
     border-radius: 24px;
 
     color: #fff;
+
     background: transparent;
 
     text-decoration: none;
 
     font-size: 19px;
+
     font-weight: 600;
 
-    transition: 0.2s ease;
+    transition: 0.25s ease;
 }
+
 
 .buttons a:hover {
     background: rgba(168, 85, 247, 0.12);
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.5),
+        0 0 30px rgba(168, 85, 247, 0.2);
+
+    transform: translateY(-2px);
 }
 
 
@@ -178,12 +222,14 @@ body {
     margin-top: 140px;
 }
 
+
 .section h2 {
     margin-bottom: 65px;
 
     color: #c084fc;
 
     font-size: 42px;
+
     font-weight: 700;
 
     letter-spacing: 2px;
@@ -200,6 +246,7 @@ body {
     color: #ddd;
 
     font-size: 19px;
+
     font-weight: 400;
 
     line-height: 1.9;
@@ -212,6 +259,7 @@ body {
 
 .interest-card {
     margin-bottom: 30px;
+
     padding: 32px;
 
     text-align: left;
@@ -219,8 +267,22 @@ body {
     background: rgba(168, 85, 247, 0.05);
 
     border: 1px solid rgba(168, 85, 247, 0.3);
+
     border-radius: 30px;
+
+    transition: 0.25s ease;
 }
+
+
+.interest-card:hover {
+    border-color: rgba(168, 85, 247, 0.7);
+
+    background: rgba(168, 85, 247, 0.08);
+
+    box-shadow:
+        0 0 25px rgba(168, 85, 247, 0.12);
+}
+
 
 .interest-card h3 {
     margin-bottom: 18px;
@@ -228,24 +290,31 @@ body {
     color: #c084fc;
 
     font-size: 22px;
-    font-weight: 700;
+
+    font-weight: 600;
 }
+
 
 .interest-card p {
     color: #ddd;
 
     font-size: 17px;
+
+    font-weight: 400;
+
     line-height: 1.7;
 }
 
 
 /* =========================================
    PHOTOGRAPHY GALLERY
-   3 PHOTOS - NO CROPPING
+   3 PHOTOS
+   NO CROPPING
 ========================================= */
 
 .gallery {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     gap: 15px;
@@ -253,8 +322,10 @@ body {
     align-items: start;
 }
 
+
 .gallery img {
     width: 100%;
+
     height: auto;
 
     display: block;
@@ -262,9 +333,20 @@ body {
     object-fit: contain;
 
     border: 2px solid #9333ea;
+
     border-radius: 20px;
 
     background: #000;
+
+    transition: 0.25s ease;
+}
+
+
+.gallery img:hover {
+    border-color: #c084fc;
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.3);
 }
 
 
@@ -274,11 +356,14 @@ body {
 
 .skills {
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: center;
 
     gap: 12px;
 }
+
 
 .skills span {
     padding: 12px 18px;
@@ -286,9 +371,12 @@ body {
     color: #e9d5ff;
 
     border: 2px solid #9333ea;
+
     border-radius: 30px;
 
     font-size: 14px;
+
+    font-weight: 500;
 }
 
 
@@ -298,28 +386,51 @@ body {
 
 .connect {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
     gap: 25px;
 }
 
+
 .connect a {
     width: 280px;
+
     height: 68px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border: 2px solid #a855f7;
+
     border-radius: 24px;
 
     color: #fff;
 
+    background: transparent;
+
     text-decoration: none;
 
     font-size: 19px;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+
+.connect a:hover {
+    background: rgba(168, 85, 247, 0.12);
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.4);
+
+    transform: translateY(-2px);
 }
 
 
@@ -329,6 +440,7 @@ body {
 
 footer {
     margin-top: 80px;
+
     padding-top: 25px;
 
     border-top: 1px solid #3b0764;
@@ -336,6 +448,8 @@ footer {
     color: #777;
 
     font-size: 11px;
+
+    font-weight: 400;
 }
 
 
@@ -347,6 +461,7 @@ footer {
 
     .page {
         width: 100%;
+
         padding: 8px 16px 60px;
     }
 
@@ -355,6 +470,7 @@ footer {
 
     .profile-photo {
         width: 300px;
+
         height: 300px;
 
         border-radius: 42px;
@@ -366,12 +482,13 @@ footer {
     .tagline {
         margin-top: 48px;
 
-        font-size: 11px;
-        font-weight: 700;
+        font-size: 13px;
+
+        font-weight: 600;
 
         letter-spacing: 2px;
 
-        white-space: nowrap !important;
+        white-space: nowrap;
     }
 
 
@@ -380,12 +497,15 @@ footer {
     .full-name {
         margin-top: 50px;
 
-        font-size: 25px;
-        font-weight: 400;
+        font-size: 30px;
+
+        font-weight: 600;
+
+        line-height: 1.2;
 
         letter-spacing: 0;
 
-        white-space: nowrap !important;
+        white-space: nowrap;
     }
 
 
@@ -394,9 +514,11 @@ footer {
     .course {
         margin-top: 32px;
 
-        font-size: 17px;
+        font-size: 18px;
 
-        white-space: nowrap !important;
+        font-weight: 400;
+
+        white-space: nowrap;
     }
 
 
@@ -408,11 +530,15 @@ footer {
         gap: 25px;
     }
 
+
     .buttons a {
         width: 270px;
+
         height: 64px;
 
         font-size: 18px;
+
+        font-weight: 600;
     }
 
 
@@ -422,10 +548,13 @@ footer {
         margin-top: 120px;
     }
 
+
     .section h2 {
         margin-bottom: 55px;
 
         font-size: 34px;
+
+        font-weight: 700;
     }
 
 
@@ -433,6 +562,8 @@ footer {
 
     .about p {
         font-size: 17px;
+
+        font-weight: 400;
 
         line-height: 1.8;
     }
@@ -446,19 +577,22 @@ footer {
         border-radius: 26px;
     }
 
+
     .interest-card h3 {
         font-size: 20px;
+
+        font-weight: 600;
     }
+
 
     .interest-card p {
         font-size: 16px;
+
+        font-weight: 400;
     }
 
 
-    /* =====================================
-       MOBILE PHOTOGRAPHY
-       FULL PHOTO - NO CROPPING
-    ===================================== */
+    /* GALLERY */
 
     .gallery {
         grid-template-columns: 1fr 1fr;
@@ -468,8 +602,10 @@ footer {
         align-items: start;
     }
 
+
     .gallery img {
         width: 100%;
+
         height: auto;
 
         display: block;
@@ -483,7 +619,9 @@ footer {
     /* SKILLS */
 
     .skills span {
-        font-size: 12px;
+        font-size: 13px;
+
+        font-weight: 500;
 
         padding: 9px 13px;
     }
@@ -493,7 +631,12 @@ footer {
 
     .connect a {
         width: 270px;
+
         height: 64px;
+
+        font-size: 18px;
+
+        font-weight: 600;
     }
 
 
@@ -502,4 +645,5 @@ footer {
     footer {
         font-size: 10px;
     }
+
 }
